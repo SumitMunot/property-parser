@@ -1,0 +1,17 @@
+%h1 Listing fetchers
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @fetchers.each do |fetcher|
+    %tr
+      %td= link_to 'Show', fetcher
+      %td= link_to 'Edit', edit_fetcher_path(fetcher)
+      %td= link_to 'Destroy', fetcher, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Fetcher', new_fetcher_path

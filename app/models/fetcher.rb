@@ -10,7 +10,7 @@ class Fetcher < ActiveRecord::Base
 
     property_data.each do |property|
       property_hash = build_formatted_property_hash(property)
-      room_data = {room: property_hash}
+      room_data = {'room' => property_hash}
     end
 
     room_data
